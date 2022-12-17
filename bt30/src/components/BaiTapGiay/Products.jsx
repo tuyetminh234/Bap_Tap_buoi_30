@@ -17,7 +17,7 @@ export default class Product extends Component {
             >
               SHOW DESCRIPTION
             </button>
-            <button onClick={()=>this.props.addToCart(this.props.element)} className='btn btn-success'>Thêm giỏ hàng</button>
+            <button onClick={()=>this.props.addToCart(this.props.element)} className='btn btn-success'>Add to cart</button>
           </div>
         </div>
       );

@@ -2,10 +2,10 @@ import React, { Component } from "react";
 
 export default class GioHang extends Component {
   renderCart = () => {
-   return this.props.cart.map((element) => {
+    return this.props.cart.map((element) => {
       return (
         <tr key={element.id}>
-          <td>{ element.id}</td>
+          <td>{element.id}</td>
           <td>
             <img
               width={50}
@@ -16,14 +16,14 @@ export default class GioHang extends Component {
           </td>
           <td>{element.name}</td>
           <td>
-            <button onClick={()=> this.props.handleQuantity(element, false)} className="btn btn-warning">-</button>
+            <button onClick={() => this.props.handleQuantity(element, false)} className="btn btn-warning">-</button>
             <span className="mx-1">{element.soLuong}</span>
-            <button onClick={()=> this.props.handleQuantity(element, true)} className="btn btn-warning">+</button>
+            <button onClick={() => this.props.handleQuantity(element, true)} className="btn btn-warning">+</button>
           </td>
-          <td>{element. price}</td>
+          <td>{element.price}</td>
           <td>{element.price * element.soLuong}</td>
           <td>
-            <button onClick={()=> this.props.handleDelete(element)} className="btn btn-danger">XÓA</button>
+            <button onClick={() => this.props.handleDelete(element)} className="btn btn-danger">XÓA</button>
           </td>
         </tr>
       )

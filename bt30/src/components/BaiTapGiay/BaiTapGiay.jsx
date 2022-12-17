@@ -67,15 +67,17 @@ export default class BaiTapGiay extends Component {
       cart: data,
     })
 
-    handleDelete = (shoes) => {
-      const data = [...this.state.cart]
-      const idx = data.findIndex((element) => element.id === shoes.id)
-      data.splice(idx, 1)
-      this.setState({
-        cart: data,
-      })
+   
+  }
+  handleDelete = (shoes) => {
+    const data = [...this.state.cart]
+    const idx = data.findIndex((element) => element.id === shoes.id)
+    console.log(idx);
+    data.splice(idx, 1)
+    this.setState({
+      cart: data,
+    })
 
-    }
   }
   render() {
     return (
